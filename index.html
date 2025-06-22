@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardWise - Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+        /* For webkit-based browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+        }
+        .animate-spin-slow {
+            animation: spin 2s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+    <!-- Phone Mockup Container -->
+    <div class="w-full max-w-sm h-[800px] bg-gray-50 rounded-3xl shadow-2xl overflow-hidden relative border-8 border-black">
+        <div class="flex flex-col h-full">
+
+            <!-- Header -->
+            <header class="p-4 flex justify-between items-center bg-white/80 backdrop-blur-sm sticky top-0 z-10 border-b">
+                <div>
+                    <p class="text-sm text-gray-500">สวัสดีตอนเช้า</p>
+                    <h1 class="text-2xl font-bold text-gray-800">คุณผู้ใช้</h1>
+                </div>
+                <button class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors">
+                    <i class="fa-solid fa-user text-gray-600"></i>
+                </button>
+            </header>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-y-auto p-6 space-y-6">
+                
+                <!-- Summary Card -->
+                <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-6 rounded-2xl shadow-lg">
+                    <p class="text-sm opacity-80">ยอดใช้จ่ายเดือนนี้</p>
+                    <p class="text-4xl font-bold mt-2">฿15,480.50</p>
+                    <div class="mt-4 h-2 bg-white/30 rounded-full">
+                        <div class="h-2 bg-white rounded-full w-3/4"></div>
+                    </div>
+                    <p class="text-xs opacity-80 mt-2">เป้าหมายรายเดือน: ฿20,000</p>
+                </div>
+
+                <!-- Syncing Status -->
+                <div class="bg-blue-50 border border-blue-200 text-blue-700 p-3 rounded-xl flex items-center space-x-3">
+                    <i class="fa-solid fa-sync fa-spin"></i>
+                    <p class="text-sm font-medium">กำลังอ่านรายการใหม่อีก 3 รายการ...</p>
+                </div>
+
+
+                <!-- Recent Transactions -->
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">รายการล่าสุด</h2>
+                    <div class="space-y-3">
+                        
+                        <!-- Transaction Item 1 -->
+                        <a href="edit-transaction-overiew.html">
+                            <div class="flex items-center bg-white p-4 rounded-xl shadow-sm hover:bg-gray-200">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fa-solid fa-utensils text-blue-500 text-xl"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <p class="font-bold text-gray-800">Sizzler</p>
+                                    <p class="text-sm text-gray-500">KBank Visa</p>
+                                </div>
+                                <p class="font-bold text-red-500">- ฿899.00</p>
+                            </div>
+                        </a>
+                        
+                        <!-- Transaction Item 2 -->
+                        <div class="flex items-center bg-white p-4 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-train-subway text-green-500 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">BTS Skytrain</p>
+                                <p class="text-sm text-gray-500">Citi Rewards</p>
+                            </div>
+                            <p class="font-bold text-red-500">- ฿44.00</p>
+                        </div>
+
+                        <!-- Transaction Item 3 -->
+                        <div class="flex items-center bg-white p-4 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-cart-shopping text-orange-500 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">Shopee</p>
+                                <p class="text-sm text-gray-500">KBank Visa</p>
+                            </div>
+                            <p class="font-bold text-red-500">- ฿1,250.00</p>
+                        </div>
+
+                        <!-- Transaction Item 4 -->
+                        <div class="flex items-center bg-white p-4 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-film text-purple-500 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">Netflix</p>
+                                <p class="text-sm text-gray-500">UOB Privimiles</p>
+                            </div>
+                            <p class="font-bold text-red-500">- ฿169.00</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <!-- Bottom Navigation Bar -->
+            <nav class="bg-white/80 backdrop-blur-sm border-t border-gray-200 grid grid-cols-4 gap-2 p-2">
+                <a href="#" class="flex flex-col items-center justify-center p-2 rounded-lg text-indigo-600 bg-indigo-100">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span class="text-xs font-medium">ภาพรวม</span>
+                </a>
+                <a href="transactions.html" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+                    <i class="fa-solid fa-list-ul"></i>
+                    <span class="text-xs">ธุรกรรม</span>
+                </a>
+                <a href="analysis.html" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="text-xs">วิเคราะห์</span>
+                </a>
+                 <a href="cards-management.html" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span class="text-xs">บัตร</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+</html>

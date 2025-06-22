@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardWise - Collapsible Tips & Benefits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #f3f4f6;
+        }
+        details > summary {
+            list-style: none;
+            display: block; /* Allow multi-line content in summary */
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .accordion-arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+    <div class="w-full max-w-sm h-[800px] bg-gray-100 rounded-3xl shadow-2xl overflow-hidden relative border-8 border-black">
+        <div class="flex flex-col h-full">
+
+            <header class="p-4 flex items-center bg-gray-100/80 backdrop-blur-sm sticky top-0 z-10 border-b border-gray-200">
+                <a href="analysis.html">
+                    <button class="text-gray-600 w-8 h-8 rounded-full hover:bg-gray-200 flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800 mx-auto">CardWise Tips</h1>
+                <div class="w-8"></div> 
+            </header>
+
+            <main class="flex-1 overflow-y-auto p-6 space-y-6">
+                
+                <section>
+                     <h2 class="text-lg font-bold text-gray-800 mb-4">คำแนะนำสำหรับคุณ</h2>
+                     <div class="space-y-3">
+                        <!-- Tip 1 -->
+                        <div class="bg-white p-4 rounded-2xl shadow-sm flex items-start space-x-4">
+                            <div class="mt-1 text-2xl text-green-500">
+                               <i class="fa-solid fa-gas-pump"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">จ่ายค่าน้ำมันให้คุ้มขึ้น</p>
+                                <p class="text-sm text-gray-600">เห็นว่าปกติคุณใช้ KBank Visa เติมน้ำมัน ลองเปลี่ยนมาใช้ <span class="font-bold text-green-600">Citi Rewards</span> เพื่อรับเงินคืน 3% นะครับ</p>
+                            </div>
+                        </div>
+                        <!-- Tip 2 -->
+                         <div class="bg-white p-4 rounded-2xl shadow-sm flex items-start space-x-4">
+                            <div class="mt-1 text-2xl text-blue-500">
+                               <i class="fa-solid fa-plane-departure"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-bold text-gray-800">มีแพลนไปเที่ยวใช่ไหม?</p>
+                                <p class="text-sm text-gray-600">ถ้าจองโรงแรมผ่าน Agoda ลองใช้ <span class="font-bold text-blue-600">UOB Privimiles</span> จะได้รับส่วนลดเพิ่มสูงสุด 7% ทันที</p>
+                            </div>
+                        </div>
+                     </div>
+                </section>
+
+                <section>
+                    <div class="border-t border-gray-200 pt-6">
+                        <h2 class="text-lg font-bold text-gray-800 mb-4">สำรวจสิทธิประโยชน์บัตร</h2>
+                        <div class="space-y-3">
+                            
+                            <!-- KBank Visa Accordion -->
+                            <details class="bg-white rounded-2xl shadow-sm group hover:bg-gray-200">
+                                <summary class="p-4 cursor-pointer">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <img src="https://placehold.co/40x40/34A853/FFFFFF?text=K" alt="KBank" class="w-10 h-10 rounded-full mr-3">
+                                            <p class="font-bold text-lg text-gray-800">KBank Visa</p>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right accordion-arrow transition-transform"></i>
+                                    </div>
+                                    <div class="mt-3 flex items-center space-x-4 text-xs text-gray-600 flex-wrap gap-y-2">
+                                        <span class="inline-flex items-center"><i class="fa-solid fa-tag w-4 mr-1.5 text-orange-500"></i>ช้อปปิ้งออนไลน์</span>
+                                        <span class="inline-flex items-center"><i class="fa-solid fa-utensils w-4 mr-1.5 text-blue-500"></i>ร้านอาหาร</span>
+                                        <span class="inline-flex items-center"><i class="fa-solid fa-film w-4 mr-1.5 text-purple-500"></i>ดูหนัง</span>
+                                    </div>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-100">
+                                    <ul class="text-sm text-gray-700 space-y-2">
+                                        <li class="flex items-start"><i class="fa-solid fa-tag text-gray-400 w-5 mt-1"></i><span><span class="font-semibold">Shopee:</span> รับ Coins คืนสูงสุด 10%</span></li>
+                                        <li class="flex items-start"><i class="fa-solid fa-utensils text-gray-400 w-5 mt-1"></i><span><span class="font-semibold">ร้านอาหาร:</span> รับคะแนนสะสม x2</span></li>
+                                        <li class="flex items-start"><i class="fa-solid fa-film text-gray-400 w-5 mt-1"></i><span><span class="font-semibold">ดูหนัง:</span> ซื้อตั๋ว 1 แถม 1 ที่ Major Cineplex</span></li>
+                                    </ul>
+                                </div>
+                            </details>
+                            
+                            <!-- Citi Rewards Accordion -->
+                            <details class="bg-white rounded-2xl shadow-sm group hover:bg-gray-200">
+                                <summary class="p-4 cursor-pointer">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <img src="https://placehold.co/40x40/1A73E8/FFFFFF?text=C" alt="Citi" class="w-10 h-10 rounded-full mr-3">
+                                            <p class="font-bold text-lg text-gray-800">Citi Rewards</p>
+                                        </div>
+                                         <i class="fa-solid fa-chevron-right accordion-arrow transition-transform"></i>
+                                    </div>
+                                    <div class="mt-3 flex items-center space-x-4 text-xs text-gray-600">
+                                        <span class="inline-flex items-center"><i class="fa-solid fa-gas-pump w-4 mr-1.5 text-green-500"></i>เงินคืนน้ำมัน</span>
+                                        <span class="inline-flex items-center"><i class="fa-solid fa-building w-4 mr-1.5 text-pink-500"></i>ห้างสรรพสินค้า</span>
+                                    </div>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-100">
+                                    <ul class="text-sm text-gray-700 space-y-2">
+                                        <li class="flex items-start"><i class="fa-solid fa-gas-pump text-gray-400 w-5 mt-1"></i><span><span class="font-semibold">ปั๊มน้ำมัน:</span> รับเครดิตเงินคืน 3% ที่ Shell</span></li>
+                                        <li class="flex items-start"><i class="fa-solid fa-building text-gray-400 w-5 mt-1"></i><span><span class="font-semibold">ห้างสรรพสินค้า:</span> รับส่วนลด 5% ที่ Central</span></li>
+                                    </ul>
+                                </div>
+                            </details>
+
+                            <!-- UOB Privimiles Accordion -->
+                           <details class="bg-white rounded-2xl shadow-sm group hover:bg-gray-200">
+                                <summary class="p-4 cursor-pointer">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <img src="https://placehold.co/40x40/5F6368/FFFFFF?text=U" alt="UOB" class="w-10 h-10 rounded-full mr-3">
+                                            <p class="font-bold text-lg text-gray-800">UOB Privimiles</p>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right accordion-arrow transition-transform"></i>
+                                    </div>
+                                    <div class="mt-3 flex items-center space-x-4 text-xs text-gray-600">
+                                        <span class="inline-flex items-center"><i class="fa-solid fa-plane-departure w-4 mr-1.5 text-sky-500"></i>แลกไมล์</span>
+                                        <span class="inline-flex items-center"><i class="fa-solid fa-couch w-4 mr-1.5 text-gray-500"></i>Lounge</span>
+                                    </div>
+                                </summary>
+                                <div class="px-4 pb-4 pt-2 border-t border-gray-100">
+                                    <ul class="text-sm text-gray-700 space-y-2">
+                                        <li class="flex items-start"><i class="fa-solid fa-plane-departure text-gray-400 w-6 mt-1"></i><span><span class="font-semibold"> แลกเที่ยวบิน:</span> ทุก 1.2 คะแนน = 1 ไมล์</span></li>
+                                        <li class="flex items-start"><i class="fa-solid fa-couch text-gray-400 w-6 mt-1"></i><span><span class="font-semibold"> Lounge:</span> เข้าใช้บริการห้องรับรองสนามบิน 2 ครั้ง/ปี</span></li>
+                                    </ul>
+                                </div>
+                            </details>
+
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

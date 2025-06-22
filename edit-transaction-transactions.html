@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardWise - Edit Transaction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+        /* Custom styles for better form appearance */
+        .form-input {
+            background-color: #f3f4f6; /* bg-gray-100 */
+            border: 1px solid #d1d5db; /* border-gray-300 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 0.75rem 1rem;
+            width: 100%;
+            font-size: 1rem;
+            color: #1f2937; /* text-gray-800 */
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #4f46e5; /* border-indigo-600 */
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+        }
+        .form-label {
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+            color: #4b5563; /* text-gray-600 */
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+    <!-- Phone Mockup Container -->
+    <div class="w-full max-w-sm h-[800px] bg-gray-50 rounded-3xl shadow-2xl overflow-hidden relative border-8 border-black">
+        <div class="flex flex-col h-full">
+
+            <!-- Header -->
+            <header class="p-4 flex items-center bg-white/80 backdrop-blur-sm sticky top-0 z-10 border-b">
+                <a href="transactions.html">
+                    <button class="text-gray-600 w-8 h-8 rounded-full hover:bg-gray-200 flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800 mx-auto">แก้ไขข้อมูลธุรกรรม</h1>
+                 <div class="w-8"></div> <!-- Spacer -->
+            </header>
+
+            <!-- Main Content -->
+            <main class="flex-1 overflow-y-auto p-6 space-y-5">
+                
+                <!-- Screenshot Preview Link -->
+                <a href="image-highlight.html">
+                    <label class="form-label">ภาพหน้าจอต้นฉบับ</label>
+                    <div class="text-center p-4 bg-gray-100 border border-gray-300 rounded-xl cursor-pointer hover:bg-gray-200 transition-colors">
+                        <span class="font-medium text-indigo-600">
+                            <i class="fa-solid fa-expand mr-2"></i>กดเพื่อดูภาพหน้าจอต้นฉบับ
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Transaction Form -->
+                <div class="space-y-4">
+                    <!-- Amount -->
+                    <div>
+                        <label for="amount" class="form-label">จำนวนเงิน</label>
+                        <input type="text" id="amount" class="form-input font-bold text-2xl text-red-500" value="899.00">
+                    </div>
+                    
+                    <!-- Merchant -->
+                    <div>
+                        <label for="merchant" class="form-label">ร้านค้า/บริการ</label>
+                        <input type="text" id="merchant" class="form-input" value="Sizzler">
+                    </div>
+
+                    <!-- Card Used -->
+                     <div>
+                        <label for="card" class="form-label">บัตรที่ใช้</label>
+                         <select id="card" class="form-input appearance-none bg-no-repeat bg-right pr-8" style="background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 20 20\'%3E%3Cpath stroke=\'%236b7280\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1.5\' d=\'M6 8l4 4 4-4\'/%3E%3C/svg%3E'); background-position: right 0.5rem center; background-size: 1.5em 1.5em;">
+                            <option>KBank Visa (x9876)</option>
+                            <option>Citi Rewards (x5678)</option>
+                            <option>UOB Privimiles (x9012)</option>
+                        </select>
+                    </div>
+
+                    <!-- Category -->
+                    <div>
+                        <label for="category" class="form-label">หมวดหมู่</label>
+                        <button class="form-input text-left flex justify-between items-center">
+                            <span class="flex items-center">
+                                <i class="fa-solid fa-utensils text-blue-500 w-6 text-center mr-2"></i>
+                                อาหารและเครื่องดื่ม
+                            </span>
+                            <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                        </button>
+                    </div>
+
+                     <!-- Date -->
+                     <div>
+                        <label for="date" class="form-label">วันที่</label>
+                        <input type="text" id="date" class="form-input" value="6 มิถุนายน 2568">
+                    </div>
+
+                </div>
+
+            </main>
+
+            <!-- Footer Action Button -->
+            <footer class="p-4 bg-white/80 backdrop-blur-sm border-t border-gray-200">
+                <button class="w-full bg-indigo-600 text-white font-bold py-4 rounded-xl shadow-lg hover:bg-indigo-700 transition-colors">
+                    บันทึกการแก้ไข
+                </button>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardWise - Screenshot Highlight</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+        .sms-bubble {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 20px; /* ค่าความโค้งของกล่องข้อความ */
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+    <!-- Phone Mockup Container -->
+    <div class="w-full max-w-sm h-[800px] bg-white rounded-3xl shadow-2xl overflow-hidden relative border-8 border-black">
+        <div class="flex flex-col h-full">
+
+            <!-- Header -->
+            <header class="p-3 flex items-center bg-gray-50/90 backdrop-blur-sm sticky top-0 z-20 border-b">
+                 <button class="text-blue-500 text-lg w-10 h-10 rounded-full hover:bg-gray-200 flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="flex-1 text-center">
+                    <p class="font-bold text-lg">KBank</p>
+                    <p class="text-xs text-gray-500">แตะเพื่อดูข้อมูลรายชื่อ</p>
+                </div>
+                 <button class="text-blue-500 text-lg w-10 h-10 rounded-full hover:bg-gray-200 flex items-center justify-center">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
+            </header>
+
+            <!-- Main Content: SMS-like interface -->
+            <main class="flex-1 overflow-y-auto p-4 flex flex-col space-y-4">
+                
+                <!-- Date Separator -->
+                <div class="text-center text-xs text-gray-500">อ. 3 มิ.ย. 68</div>
+
+                <!-- Transaction message 1 -->
+                <div class="flex justify-start">
+                    <div class="sms-bubble bg-gray-200 text-gray-800">
+                        ใช้บัตร x0192 ที่ SHOPEE PAY*PROMPTMART ยอด 279.00บ. ณ วันที่ 03/06/2568 เวลา 11:20
+                    </div>
+                </div>
+
+                <!-- Date Separator -->
+                <div class="text-center text-xs text-gray-500">พ. 4 มิ.ย. 68</div>
+                
+                <!-- OTP message -->
+                <div class="flex justify-start">
+                    <div class="sms-bubble bg-gray-200 text-gray-800">
+                        รหัส OTP คือ 123456 สำหรับการเข้าสู่ระบบ
+                    </div>
+                </div>
+
+                <!-- Date Separator -->
+                <div class="text-center text-xs text-gray-500">ศ. 6 มิ.ย. 68, 15:16</div>
+                
+                <!-- The Highlighted Transaction -->
+                <div class="flex justify-start">
+                    <!-- The bubble itself is now the relative container -->
+                    <div class="relative sms-bubble text-gray-800 bg-red-500/10 ring-2 ring-red-500">
+                         บริษัทขอแจ้งว่า คุณได้ทำรายการใช้จ่ายผ่านบัตรที่ลงท้ายด้วย 9876 ยอดเงิน 899.00 บ. เมื่อ 6 มิ.ย. 68 คุณมีวงเงินคงเหลือใช้ได้ 49,101.00 บ.
+                        <!-- The checkmark is now inside the bubble and positioned relative to it -->
+                        <div class="absolute top-0 right-0 -mt-2 -mr-2 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white">
+                           <i class="fa-solid fa-check fa-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Date Separator -->
+                <div class="text-center text-xs text-gray-500">อา. 8 มิ.ย. 68</div>
+
+                <!-- Transaction message 2 -->
+                <div class="flex justify-start">
+                    <div class="sms-bubble bg-gray-200 text-gray-800">
+                        ใช้บัตร x9876 ที่ Grab*Food ยอด 350.00บ.
+                    </div>
+                </div>
+
+
+                <!-- Another filler message -->
+                <div class="text-center text-xs text-gray-500">ศ. 13 มิ.ย. 68</div>
+
+                 <div class="flex justify-start">
+                    <div class="sms-bubble bg-gray-200 text-gray-800">
+                        บริการ 'ดีจัง' แบ่งจ่ายยอด...
+                    </div>
+                </div>
+
+            </main>
+             <!-- Footer input area -->
+            <footer class="p-2 bg-gray-100 border-t">
+                <div class="bg-white rounded-full flex items-center p-1 border">
+                    <button class="text-blue-500 text-xl w-8 h-8 flex-shrink-0"><i class="fa-solid fa-plus-circle"></i></button>
+                    <input type="text" placeholder="ข้อความตัวอักษร" class="flex-1 bg-transparent px-2 focus:outline-none">
+                    <button class="text-gray-400 text-xl w-8 h-8 flex-shrink-0"><i class="fa-solid fa-microphone"></i></button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

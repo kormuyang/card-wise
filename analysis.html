@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardWise - Analysis (Rebuilt)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+        /* For webkit-based browsers (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+        }
+        .chart-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .chart-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+    <!-- Phone Mockup Container -->
+    <div class="w-full max-w-sm h-[800px] bg-gray-50 rounded-3xl shadow-2xl overflow-hidden relative border-8 border-black">
+        <div class="flex flex-col h-full">
+
+            <!-- Header (เหมือนกับหน้าจอธุรกรรม) -->
+            <header class="p-4 flex justify-between items-center bg-white/80 backdrop-blur-sm sticky top-0 z-10 border-b">
+                <h1 class="text-2xl font-bold text-gray-800">วิเคราะห์</h1>
+                <button class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors">
+                     <i class="fa-solid fa-calendar-alt text-gray-600"></i>
+                </button>
+            </header>
+
+            <!-- Main Content (ใช้ Layout เดียวกัน) -->
+            <main class="flex-1 overflow-y-auto p-6 space-y-6">
+                
+                <!-- Spending Breakdown Card -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm hover:bg-gray-200">
+                    <a href="#">
+                        <h2 class="text-base font-bold text-gray-800 mb-4">สรุปการใช้จ่ายเดือนมิถุนายน</h2>
+                        <div class="flex flex-col items-center">
+                            <div class="chart-container mb-4">
+                                <svg viewBox="0 0 36 36" class="w-full h-full">
+                                    <circle cx="18" cy="18" r="15.9155" class="fill-transparent stroke-gray-200" stroke-width="3.5"></circle>
+                                    <circle cx="18" cy="18" r="15.9155" class="fill-transparent stroke-blue-500" stroke-width="3.5" stroke-dasharray="40, 60" stroke-dashoffset="25"></circle>
+                                    <circle cx="18" cy="18" r="15.9155" class="fill-transparent stroke-orange-400" stroke-width="3.5" stroke-dasharray="30, 70" stroke-dashoffset="-15"></circle>
+                                    <circle cx="18" cy="18" r="15.9155" class="fill-transparent stroke-green-500" stroke-width="3.5" stroke-dasharray="20, 80" stroke-dashoffset="-45"></circle>
+                                    <circle cx="18" cy="18" r="15.9155" class="fill-transparent stroke-purple-500" stroke-width="3.5" stroke-dasharray="10, 90" stroke-dashoffset="-65"></circle>
+                                </svg>
+                                <div class="chart-text">
+                                    <p class="text-xs text-gray-500">รวม</p>
+                                    <p class="font-bold text-lg text-gray-800">฿15,480.50</p>
+                                </div>
+                            </div>
+                            <div class="w-full space-y-3 pt-3 border-t border-gray-300">
+                                <div class="flex items-center text-sm"><span class="w-2.5 h-2.5 rounded-full bg-blue-500 mr-3"></span><span class="font-medium text-gray-600 flex-1">อาหาร</span><span class="font-medium">40%</span></div>
+                                <div class="flex items-center text-sm"><span class="w-2.5 h-2.5 rounded-full bg-orange-400 mr-3"></span><span class="font-medium text-gray-600 flex-1">ช้อปปิ้ง</span><span class="font-medium">30%</span></div>
+                                <div class="flex items-center text-sm"><span class="w-2.5 h-2.5 rounded-full bg-green-500 mr-3"></span><span class="font-medium text-gray-600 flex-1">เดินทาง</span><span class="font-medium">20%</span></div>
+                                <div class="flex items-center text-sm"><span class="w-2.5 h-2.5 rounded-full bg-purple-500 mr-3"></span><span class="font-medium text-gray-600 flex-1">อื่นๆ</span><span class="font-medium">10%</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Upcoming Payments Card -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm hover:bg-gray-200">
+                    <a href="suggest-payment.html">
+                        <h2 class="text-base font-bold text-gray-800 mb-4">ยอดบัตรที่ต้องชำระ</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/40x40/34A853/FFFFFF?text=K" alt="KBank" class="w-10 h-10 rounded-full mr-4">
+                                <div class="flex-1">
+                                    <p class="font-semibold text-gray-700">KBank Visa</p>
+                                    <p class="text-xs text-red-500">ครบกำหนด 5 ก.ค. 68</p>
+                                </div>
+                                <p class="font-bold text-base text-gray-800">฿10,250.75</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img src="https://placehold.co/40x40/1A73E8/FFFFFF?text=C" alt="Citi" class="w-10 h-10 rounded-full mr-4">
+                                <div class="flex-1">
+                                    <p class="font-semibold text-gray-700">Citi Rewards</p>
+                                    <p class="text-xs text-red-500">ครบกำหนด 10 ก.ค. 68</p>
+                                </div>
+                                <p class="font-bold text-base text-gray-800">฿28,800.00</p>
+                            </div>
+                        </div>
+                        <div class="border-t my-4 border-gray-300"></div>
+                        <div class="flex justify-between items-center">
+                            <p class="font-bold text-gray-800">ยอดรวมที่ต้องชำระ</p>
+                            <p class="text-lg font-bold text-red-600">฿39,050.75</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- CardWise Tips Card -->
+                 <div class="bg-white p-5 rounded-2xl shadow-sm hover:bg-gray-200">
+                    <a href="tips.html">
+                        <h2 class="text-base font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fa-solid fa-lightbulb text-yellow-400 mr-2"></i>
+                            CardWise Tips
+                        </h2>
+                        <div class="space-y-3">
+                            <div class="flex items-start bg-blue-50 p-4 rounded-xl">
+                                <i class="fa-solid fa-gas-pump text-blue-500 text-lg mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-blue-800">เติมน้ำมันครั้งหน้า</p>
+                                    <p class="text-xs text-blue-700">ลองใช้ <span class="font-bold">Citi Rewards</span> เพื่อรับเครดิตเงินคืน 3%</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-orange-50 p-4 rounded-xl">
+                                <i class="fa-solid fa-cart-shopping text-orange-400 text-lg mt-1 mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-sm text-orange-800">ซื้อของออนไลน์</p>
+                                    <p class="text-xs text-orange-700">ลองใช้ <span class="font-bold">KBank Shopee</span> เพื่อรับ Coins x10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </main>
+
+            <!-- Bottom Navigation Bar (เหมือนกับหน้าจอธุรกรรม) -->
+            <nav class="bg-white/80 backdrop-blur-sm border-t border-gray-200 grid grid-cols-4 gap-2 p-2">
+                <a href="index.html" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span class="text-xs">ภาพรวม</span>
+                </a>
+                <a href="transactions.html" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+                    <i class="fa-solid fa-list-ul"></i>
+                    <span class="text-xs">ธุรกรรม</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center p-2 rounded-lg text-indigo-600 bg-indigo-100">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span class="text-xs font-medium">วิเคราะห์</span>
+                </a>
+                 <a href="cards-management.html" class="flex flex-col items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span class="text-xs">บัตร</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+</html>
